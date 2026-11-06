@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <h1>Car Game</h1>
+      <div class="hud">
+        <div class="hud-item">
+          <span class="label">Score</span>
+          <span id="score">0</span>
+        </div>
+        <div class="hud-item">
+          <span class="label">Best</span>
+          <span id="best">0</span>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas" width="420" height="640" aria-label="Car game"></canvas>
+
+      <div class="controls">
+        <span>Use ← → or A / D</span>
+        <span>Press Space to restart</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
