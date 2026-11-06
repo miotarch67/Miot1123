@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="game-shell">
+    <main class="game-shell">
       <h1>Car Game</h1>
       <div class="hud">
         <div class="hud-item">
@@ -20,13 +20,24 @@
         </div>
       </div>
 
-      <canvas id="gameCanvas" width="420" height="640" aria-label="Car game"></canvas>
+      <div class="game-stage">
+        <canvas id="gameCanvas" width="420" height="640" aria-label="Car game"></canvas>
+        <div id="startScreen" class="start-screen">
+          <h2 id="screenTitle">Ready to race?</h2>
+          <p id="screenMessage">Dodge the traffic and get the highest score!</p>
+          <button id="startButton" class="start-button" type="button">Start game</button>
+        </div>
+      </div>
 
       <div class="controls">
-        <span>Use ← → or A / D</span>
-        <span>Press Space to restart</span>
+        <span>Keyboard: ← → or A / D</span>
+        <button id="soundButton" class="sound-button" type="button" aria-pressed="true">🔊 Sound on</button>
       </div>
-    </div>
+      <div class="touch-controls" aria-label="Touch steering controls">
+        <button class="steer-button" type="button" data-direction="left" aria-label="Steer left">◀ Left</button>
+        <button class="steer-button" type="button" data-direction="right" aria-label="Steer right">Right ▶</button>
+      </div>
+    </main>
 
     <script src="script.js"></script>
   </body>
